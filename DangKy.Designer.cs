@@ -151,6 +151,7 @@
             this.btnSignUp.TabIndex = 28;
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // lblOccupation
             // 

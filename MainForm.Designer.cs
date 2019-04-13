@@ -36,6 +36,8 @@
             this.btThoat = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbPhong = new System.Windows.Forms.ComboBox();
+            this.txtPhong = new System.Windows.Forms.TextBox();
             this.btThem = new System.Windows.Forms.Button();
             this.txtTienCoc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtPhong = new System.Windows.Forms.TextBox();
-            this.cbPhong = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -63,6 +63,7 @@
             this.btnView.TabIndex = 3;
             this.btnView.Text = "View Profile";
             this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // lblThongBao
             // 
@@ -97,6 +98,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(406, 297);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // btSua
             // 
@@ -106,6 +108,7 @@
             this.btSua.TabIndex = 5;
             this.btSua.Text = "SỬA";
             this.btSua.UseVisualStyleBackColor = true;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // btThoat
             // 
@@ -115,6 +118,7 @@
             this.btThoat.TabIndex = 5;
             this.btThoat.Text = "THOÁT";
             this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btXoa
             // 
@@ -124,6 +128,7 @@
             this.btXoa.TabIndex = 5;
             this.btXoa.Text = "XÓA";
             this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // groupBox1
             // 
@@ -150,6 +155,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CHI TIẾT";
             // 
+            // cbPhong
+            // 
+            this.cbPhong.FormattingEnabled = true;
+            this.cbPhong.Location = new System.Drawing.Point(207, 208);
+            this.cbPhong.Name = "cbPhong";
+            this.cbPhong.Size = new System.Drawing.Size(121, 23);
+            this.cbPhong.TabIndex = 14;
+            this.cbPhong.SelectedIndexChanged += new System.EventHandler(this.cbPhong_SelectedIndexChanged);
+            // 
+            // txtPhong
+            // 
+            this.txtPhong.Location = new System.Drawing.Point(101, 209);
+            this.txtPhong.Name = "txtPhong";
+            this.txtPhong.Size = new System.Drawing.Size(100, 22);
+            this.txtPhong.TabIndex = 13;
+            // 
             // btThem
             // 
             this.btThem.Location = new System.Drawing.Point(101, 364);
@@ -158,6 +179,7 @@
             this.btThem.TabIndex = 12;
             this.btThem.Text = "THÊM";
             this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // txtTienCoc
             // 
@@ -248,21 +270,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "MÃ PHIẾU ĐĂNG KÝ";
             // 
-            // txtPhong
-            // 
-            this.txtPhong.Location = new System.Drawing.Point(101, 209);
-            this.txtPhong.Name = "txtPhong";
-            this.txtPhong.Size = new System.Drawing.Size(100, 22);
-            this.txtPhong.TabIndex = 13;
-            // 
-            // cbPhong
-            // 
-            this.cbPhong.FormattingEnabled = true;
-            this.cbPhong.Location = new System.Drawing.Point(207, 208);
-            this.cbPhong.Name = "cbPhong";
-            this.cbPhong.Size = new System.Drawing.Size(121, 23);
-            this.cbPhong.TabIndex = 14;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,6 +281,7 @@
             this.Controls.Add(this.lblThongBao);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
