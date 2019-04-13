@@ -144,6 +144,7 @@
             this.btnUpdate.TabIndex = 47;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // lblOccupation
             // 
@@ -251,6 +252,7 @@
             this.Controls.Add(this.lblUsername);
             this.Name = "Profile";
             this.Text = "Profile";
+            this.Load += new System.EventHandler(this.Profile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
