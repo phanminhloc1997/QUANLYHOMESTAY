@@ -102,7 +102,7 @@ namespace QUANLYHT
                     string birth = "";
                     birth = cbDate.SelectedItem.ToString() + "/" + cbMonth.SelectedItem.ToString() + "/" + cbYear.SelectedItem.ToString();
 
-                    string sql = "UPDATE USER_INFO SET PASSWORD = '" + txtPassword.Text + "', CPASSWORD = '" + txtCPassword.Text + "', EMAIL = '" + txtEmail.Text + "', ADDRESS = '" + txtAddress.Text + "', GENDER = '" + gender + "', BIRTHDAY = '" + birth + "', OCCUPATION = '" + txtOccupation.Text + "' WHERE USERNAME = '" + username + "'";
+                    string sql = "UPDATE USER_INFO SET PASSWORD='" + txtPassword.Text + "',CPASSWORD='" + txtCPassword.Text + "',EMAIL='" + txtEmail.Text + "',ADDRESS='" + txtAddress.Text + "',GENDER='" + gender + "',BIRTHDAY='" + birth + "',OCCUPATION='" + txtOccupation.Text + "' WHERE USERNAME ='"+txtUsername.Text+"'";
                     acc.ExcuteNonQuery(sql);
                     MessageBox.Show("Update Successfully !!!");
                     this.Refresh();

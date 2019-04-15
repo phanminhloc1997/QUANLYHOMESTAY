@@ -6,8 +6,16 @@ using System.Windows.Forms;
 
 namespace QUANLYHT
 {
-    class Ngay
+    public  class Ngay
     {
+        private int cbYear;
+
+        public int CbYear
+        {
+            get { return cbYear; }
+            set { cbYear = value; }
+        }
+
         public int KiemTraNhuan(ComboBox cbYear)
         {
             int year = Convert.ToInt32(cbYear.SelectedItem);

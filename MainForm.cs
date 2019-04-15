@@ -36,7 +36,7 @@ namespace QUANLYHT
             frmDN.Show();
 
             string p1 = f.TxtUsername.Text;
-            lblThongBao.Text = p1 + " Dang nhap thanh cong";
+            lblThongBao.Text = p1 + " đăng nhập thành công";
 
             SqlConnection kn = new SqlConnection(@"Data Source=DESKTOP-S0LV1V2\SQLEXPRESS;Initial Catalog=QLHOMESTAY;Integrated Security=True");
             string sql = "select * from PHONG";
@@ -105,6 +105,7 @@ namespace QUANLYHT
                 SqlCommand commandthem = new SqlCommand(them, kn);
                 commandthem.ExecuteNonQuery();
                 KetNoi();
+                MessageBox.Show("THÊM THÀNH CÔNG");
             }
             catch
             {
@@ -128,6 +129,7 @@ namespace QUANLYHT
                 SqlCommand conn = new SqlCommand(XoaPhieuDK, kn);
                 conn.ExecuteNonQuery();
                 KetNoi();
+                MessageBox.Show("XÓA THÀNH CÔNG");
             }
             catch
             {
@@ -151,6 +153,7 @@ namespace QUANLYHT
                 SqlCommand commandsua = new SqlCommand(Sua, kn);
                 commandsua.ExecuteNonQuery();
                 KetNoi();
+                MessageBox.Show("SỬA THÀNH CÔNG");
             }
             catch
             {

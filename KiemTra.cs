@@ -6,9 +6,17 @@ using System.Text.RegularExpressions;
 
 namespace QUANLYHT
 {
-    class KiemTra
+    public class KiemTra
     {
-        static public bool KiemTra_Password(string pass)
+        private string pass;
+
+        public string Pass
+        {
+            get { return pass; }
+            set { pass = value; }
+        }
+
+        public bool KiemTra_Password(string pass)
         {
             if (pass.Length >= 5 && pass.Length <= 20 && pass != "")
             {
@@ -16,7 +24,16 @@ namespace QUANLYHT
             }
             return false;
         }
-        static public bool KiemTra_CPassword(string pass, string cpass)
+
+        private string cpass;
+
+        public string Cpass
+        {
+            get { return cpass; }
+            set { cpass = value; }
+        }
+
+        public bool KiemTra_CPassword(string pass, string cpass)
         {
             if (pass == cpass)
             {
@@ -25,7 +42,16 @@ namespace QUANLYHT
             return false;
         }
         //
-        static public bool KiemTra_Username(string username)
+
+        private string username;
+
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
+
+        public bool KiemTra_Username(string username)
         {
             string kitu = @"^[a-zA-Z]{1}[a-zA-Z0-9\._\-]{0,23}[^.-]$";
 
@@ -74,7 +100,14 @@ namespace QUANLYHT
             return check;
         }
         //
-        static public bool KiemTra_Email(string email)
+        private string email;
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+        public bool KiemTra_Email(string email)
         {
             string kitu = @"^[-a-zA-Z0-9][-.a-zA-Z0-9]*@[-.a-zA-Z0-9]+(\.[-.a-zA-Z0-9]+)*\.
                  (com|edu|info|gov|int|mil|net|org|biz|name|museum|coop|aero|pro|tv|[a-zA-Z]{2})$";
