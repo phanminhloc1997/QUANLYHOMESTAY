@@ -44,6 +44,16 @@ namespace QUANLYHT
                 txtPassword.Clear();
             }
         }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult hoi;
+            hoi = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (hoi == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
         
 
        

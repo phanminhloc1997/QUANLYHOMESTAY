@@ -7,8 +7,23 @@ using System.Data.SqlClient;
 
 namespace QUANLYHT
 {
-    class KiemTraDangNhap
+    public class KiemTraDangNhap
     {
+        private string username;
+
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
+        private string password;
+
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+
         public int CheckLogin(string username, string password)
         {
             AccessData acc = new AccessData();
